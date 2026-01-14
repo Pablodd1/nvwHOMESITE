@@ -8,8 +8,7 @@ const chatbotKnowledge = {
         location: "Napa, California",
         phone: "954 422 2894",
         phoneLink: "tel:9544222894",
-        whatsapp: "+1 954 422 2894",
-        whatsappLink: "https://wa.me/19544222894",
+
         email: "info@winesnvw.com",
         bookingApp: "https://napa-one.vercel.app/",
         social: {
@@ -89,16 +88,16 @@ const chatbotKnowledge = {
     // FAQ Categories
     faqs: {
         general: [
-            {q: "How can I find the best wineries for my taste?", a: "NVW helps you find the best wineries tailored to your preferences. Use our filters to discover top-rated wineries based on wine types, amenities, and experiences."},
-            {q: "Are pets allowed at wineries?", a: "Yes! Many wineries welcome pets. Use the 'Pet-Friendly' filter to find them."},
-            {q: "Do wineries offer food and wine pairing experiences?", a: "Several wineries in Napa Valley provide curated food and wine pairing experiences. Use our filters to find the perfect match."},
-            {q: "Do I need a reservation to visit a winery?", a: "Some wineries allow walk-ins, but most require reservations. NVW provides real-time booking to ensure availability."}
+            { q: "How can I find the best wineries for my taste?", a: "NVW helps you find the best wineries tailored to your preferences. Use our filters to discover top-rated wineries based on wine types, amenities, and experiences." },
+            { q: "Are pets allowed at wineries?", a: "Yes! Many wineries welcome pets. Use the 'Pet-Friendly' filter to find them." },
+            { q: "Do wineries offer food and wine pairing experiences?", a: "Several wineries in Napa Valley provide curated food and wine pairing experiences. Use our filters to find the perfect match." },
+            { q: "Do I need a reservation to visit a winery?", a: "Some wineries allow walk-ins, but most require reservations. NVW provides real-time booking to ensure availability." }
         ],
         booking: [
-            {q: "How do I book a winery tour?", a: "Simply select a winery on the app or website, choose your preferred date and time, and complete your booking with just a few clicks."},
-            {q: "Can I reschedule or cancel my booking?", a: "Yes, most wineries allow rescheduling or cancellations. You can manage your bookings directly through the app."},
-            {q: "What if my preferred winery is fully booked?", a: "NVW will suggest similar wineries nearby based on your preferences."},
-            {q: "Can I book for a large group or private event?", a: "Absolutely! Use the 'Private Booking' filter to find wineries offering group tours."}
+            { q: "How do I book a winery tour?", a: "Simply select a winery on the app or website, choose your preferred date and time, and complete your booking with just a few clicks." },
+            { q: "Can I reschedule or cancel my booking?", a: "Yes, most wineries allow rescheduling or cancellations. You can manage your bookings directly through the app." },
+            { q: "What if my preferred winery is fully booked?", a: "NVW will suggest similar wineries nearby based on your preferences." },
+            { q: "Can I book for a large group or private event?", a: "Absolutely! Use the 'Private Booking' filter to find wineries offering group tours." }
         ]
     },
 
@@ -119,7 +118,7 @@ const chatbotKnowledge = {
     contact: {
         phone: "Call us at 954 422 2894",
         email: "Email us at info@winesnvw.com",
-        whatsapp: "Chat with us on WhatsApp at +1 954 422 2894",
+
         form: "Fill out the contact form on our Contact page",
         social: "Connect with us on LinkedIn, Instagram, or Facebook"
     },
@@ -143,7 +142,7 @@ const bilingualResponses = {
     en: {
         greeting: "Hi! I'm your NVW assistant. How can I help you today?",
         bookingInfo: "You can book your winery experience at: https://napa-one.vercel.app/",
-        contactInfo: "Contact us:\n📞 Phone: 954 422 2894\n📧 Email: info@winesnvw.com\n💬 WhatsApp: +1 954 422 2894",
+        contactInfo: "Contact us:\n📞 Phone: 954 422 2894\n📧 Email: info@winesnvw.com",
         needMoreHelp: "Need more help? Feel free to ask another question!",
         didntUnderstand: "I'm not sure I understood that. Could you rephrase your question? You can ask about bookings, wineries, tours, or contact information.",
         checkWebsite: "For more details, check our website pages or visit our booking app!"
@@ -151,7 +150,7 @@ const bilingualResponses = {
     es: {
         greeting: "¡Hola! Soy tu asistente NVW. ¿Cómo puedo ayudarte hoy?",
         bookingInfo: "Puedes reservar tu experiencia vinícola en: https://napa-one.vercel.app/",
-        contactInfo: "Contáctanos:\n📞 Teléfono: 954 422 2894\n📧 Email: info@winesnvw.com\n💬 WhatsApp: +1 954 422 2894",
+        contactInfo: "Contáctanos:\n📞 Teléfono: 954 422 2894\n📧 Email: info@winesnvw.com",
         needMoreHelp: "¿Necesitas más ayuda? ¡Pregunta lo que quieras!",
         didntUnderstand: "No estoy seguro de haber entendido. ¿Podrías reformular tu pregunta? Puedes preguntar sobre reservas, bodegas, tours o información de contacto.",
         checkWebsite: "¡Para más detalles, consulta nuestro sitio web o visita nuestra app de reservas!"
@@ -161,7 +160,7 @@ const bilingualResponses = {
 // Smart keyword matching for better question understanding
 const keywordPatterns = {
     booking: ['book', 'reserve', 'reservation', 'schedule', 'appointment', 'reserva', 'reservar', 'cita'],
-    contact: ['contact', 'phone', 'email', 'call', 'reach', 'whatsapp', 'contacto', 'teléfono', 'correo', 'llamar'],
+    contact: ['contact', 'phone', 'email', 'call', 'reach', 'contacto', 'teléfono', 'correo', 'llamar'],
     hours: ['hours', 'time', 'open', 'close', 'when', 'horario', 'hora', 'abierto', 'cerrado', 'cuándo'],
     location: ['where', 'location', 'address', 'find', 'direction', 'map', 'dónde', 'ubicación', 'dirección', 'encontrar', 'mapa'],
     wineries: ['winery', 'wineries', 'vineyard', 'wine', 'bodega', 'bodegas', 'viñedo', 'vino'],

@@ -1,42 +1,42 @@
 // Enhanced NVW Chatbot with Training Data
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('NVW Website - Interactive features loaded successfully');
-    
+
     // Load knowledge base
     const KB = typeof NVW_KNOWLEDGE_BASE !== 'undefined' ? NVW_KNOWLEDGE_BASE : {};
-    
+
     // Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
+
     if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
-        
-        document.addEventListener('click', function(event) {
+
+        document.addEventListener('click', function (event) {
             if (!event.target.closest('.nav') && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
             }
         });
     }
-    
+
     // Language Switcher
     const langButtons = document.querySelectorAll('.lang-btn');
     const currentLang = localStorage.getItem('language') || 'en';
-    
+
     setLanguage(currentLang);
-    
+
     langButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const lang = this.getAttribute('data-lang');
             setLanguage(lang);
             localStorage.setItem('language', lang);
         });
     });
-    
+
     function setLanguage(lang) {
         langButtons.forEach(btn => {
             btn.classList.remove('active');
@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.classList.add('active');
             }
         });
-        
+
         document.documentElement.lang = lang;
-        
+
         const elements = document.querySelectorAll('[data-en][data-es]');
         elements.forEach(element => {
             const text = element.getAttribute(`data-${lang}`);
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-        
+
         const placeholderElements = document.querySelectorAll('[data-placeholder-en][data-placeholder-es]');
         placeholderElements.forEach(element => {
             const placeholder = element.getAttribute(`data-placeholder-${lang}`);
@@ -67,56 +67,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // FAQ Accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
+        question.addEventListener('click', function () {
             const faqItem = this.parentElement;
             const isActive = faqItem.classList.contains('active');
-            
+
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             if (!isActive) {
                 faqItem.classList.add('active');
             }
         });
     });
-    
+
     // Newsletter Form
     const newsletterForms = document.querySelectorAll('.newsletter-form');
     newsletterForms.forEach(form => {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
             const email = this.querySelector('input[type="email"]').value;
-            
+
             const subject = 'Newsletter Subscription';
             const body = `New newsletter subscription from: ${email}`;
             window.location.href = `mailto:info@winesnvw.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
+
             const lang = localStorage.getItem('language') || 'en';
-            const message = lang === 'es' 
-                ? '¡Gracias por suscribirte! Revisa tu cliente de correo para enviar la suscripción.' 
+            const message = lang === 'es'
+                ? '¡Gracias por suscribirte! Revisa tu cliente de correo para enviar la suscripción.'
                 : 'Thank you for subscribing! Please check your email client to send the subscription.';
             alert(message);
             this.reset();
         });
     });
-    
+
     // Contact Form
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             const mailSubject = `Contact Form: ${subject}`;
             const mailBody = `Name: ${name}
 Email: ${email}
@@ -124,18 +124,18 @@ Phone: ${phone}
 
 Message:
 ${message}`;
-            
+
             window.location.href = `mailto:info@winesnvw.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-            
+
             const lang = localStorage.getItem('language') || 'en';
-            const alertMessage = lang === 'es' 
-                ? '¡Gracias por tu mensaje! Revisa tu cliente de correo para enviarlo.' 
+            const alertMessage = lang === 'es'
+                ? '¡Gracias por tu mensaje! Revisa tu cliente de correo para enviarlo.'
                 : 'Thank you for your message! Please check your email client to send it.';
             alert(alertMessage);
             this.reset();
         });
     }
-    
+
     // ENHANCED AI CHATBOT with Training Data
     const chatbotToggle = document.getElementById('chatbotToggle');
     const chatbotClose = document.getElementById('chatbotClose');
@@ -143,23 +143,23 @@ ${message}`;
     const chatbotInput = document.getElementById('chatbotInput');
     const chatbotSend = document.getElementById('chatbotSend');
     const chatbotMessages = document.getElementById('chatbotMessages');
-    
+
     if (chatbotToggle) {
-        chatbotToggle.addEventListener('click', function() {
+        chatbotToggle.addEventListener('click', function () {
             chatbotContainer.classList.toggle('active');
         });
     }
-    
+
     if (chatbotClose) {
-        chatbotClose.addEventListener('click', function() {
+        chatbotClose.addEventListener('click', function () {
             chatbotContainer.classList.remove('active');
         });
     }
-    
+
     // Quick questions
     const quickQuestions = document.querySelectorAll('.quick-question');
     quickQuestions.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const question = this.getAttribute('data-question');
             addUserMessage(question);
             setTimeout(() => {
@@ -167,7 +167,7 @@ ${message}`;
             }, 500);
         });
     });
-    
+
     function sendMessage() {
         const message = chatbotInput.value.trim();
         if (message) {
@@ -178,19 +178,19 @@ ${message}`;
             }, 500);
         }
     }
-    
+
     if (chatbotSend) {
         chatbotSend.addEventListener('click', sendMessage);
     }
-    
+
     if (chatbotInput) {
-        chatbotInput.addEventListener('keypress', function(e) {
+        chatbotInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 sendMessage();
             }
         });
     }
-    
+
     function addUserMessage(message) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'chatbot-message user-message';
@@ -198,7 +198,7 @@ ${message}`;
         chatbotMessages.appendChild(messageDiv);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
-    
+
     function addBotMessage(message) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'chatbot-message bot-message';
@@ -206,26 +206,26 @@ ${message}`;
         chatbotMessages.appendChild(messageDiv);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
-    
+
     // SMART BOT RESPONSE with Training Data and Context Understanding
     function getBotResponse(question) {
         const lang = localStorage.getItem('language') || 'en';
         const lowerQuestion = question.toLowerCase();
-        
+
         // Load chatbot knowledge (if available)
         const kb = typeof chatbotKnowledge !== 'undefined' ? chatbotKnowledge : null;
         const responses = typeof bilingualResponses !== 'undefined' ? bilingualResponses : null;
         const patterns = typeof keywordPatterns !== 'undefined' ? keywordPatterns : null;
-        
+
         // Helper to match question against keyword patterns
         function matchesPattern(text, patternKey) {
             if (!patterns || !patterns[patternKey]) return false;
             return patterns[patternKey].some(keyword => text.includes(keyword));
         }
-        
+
         // Check for booking questions
         if (matchesPattern(lowerQuestion, 'booking')) {
-            return addBotMessage(lang === 'es' 
+            return addBotMessage(lang === 'es'
                 ? `¡Puedes reservar fácilmente visitando nuestra aplicación en ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}! 
 
 Simplemente:
@@ -233,7 +233,7 @@ Simplemente:
 2. Elige fecha y hora
 3. Completa la reserva en segundos
 
-¡Recibirás confirmación instantánea!` 
+¡Recibirás confirmación instantánea!`
                 : `You can easily book by visiting our app at ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}!
 
 Simply:
@@ -243,10 +243,10 @@ Simply:
 
 You'll get instant confirmation!`);
         }
-        
+
         // Winery questions
         if (matchesPattern(lowerQuestion, 'wineries')) {
-            return addBotMessage(lang === 'es' 
+            return addBotMessage(lang === 'es'
                 ? `¡Tenemos increíbles bodegas en todo el Valle de Napa! 
 
 Puedes filtrar por:
@@ -264,7 +264,7 @@ You can filter by:
 
 Visit our app to explore all options: ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}`);
         }
-        
+
         // Tours and experiences
         if (matchesPattern(lowerQuestion, 'tours')) {
             return addBotMessage(lang === 'es'
@@ -289,30 +289,30 @@ Reserva en: ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}`
 
 Book now: ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}`);
         }
-        
+
         // Contact information
         if (matchesPattern(lowerQuestion, 'contact')) {
             const phone = kb?.company?.phone || '954 422 2894';
             const email = kb?.company?.email || 'info@winesnvw.com';
             const whatsapp = kb?.company?.whatsapp || '+1 954 422 2894';
-            
+
             return addBotMessage(lang === 'es'
                 ? `¡Estamos aquí para ayudarte!
 
 📞 Teléfono: ${phone}
 📧 Email: ${email}
-💬 WhatsApp: ${whatsapp} (¡Haz clic en el botón verde!)
+
 
 También puedes usar nuestro formulario de contacto en la página de contacto.`
                 : `We're here to help!
 
 📞 Phone: ${phone}
 📧 Email: ${email}
-💬 WhatsApp: ${whatsapp} (Click the green button!)
+
 
 You can also use our contact form on the contact page.`);
         }
-        
+
         // Hours
         if (matchesPattern(lowerQuestion, 'hours')) {
             return addBotMessage(lang === 'es'
@@ -331,7 +331,7 @@ Check specific hours in our app: ${kb?.company?.bookingApp || 'https://napa-one.
 
 💡 Tip: Harvest season (August-October) is most popular! Book ahead.`);
         }
-        
+
         // Prices
         if (matchesPattern(lowerQuestion, 'price')) {
             return addBotMessage(lang === 'es'
@@ -350,7 +350,7 @@ Usa nuestra app para filtrar por rango de precio: ${kb?.company?.bookingApp || '
 
 Use our app to filter by price range: ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}`);
         }
-        
+
         // Pet-friendly
         if (matchesPattern(lowerQuestion, 'pets')) {
             const petInfo = kb?.filters?.petFriendly || "Many wineries welcome pets. Use the 'Pet-Friendly' filter to find them.";
@@ -366,7 +366,7 @@ Use the "Pet-Friendly" filter in our app to find wineries that welcome your furr
 
 Some even have outdoor areas perfect for pets!`);
         }
-        
+
         // Family-friendly
         if (matchesPattern(lowerQuestion, 'family')) {
             return addBotMessage(lang === 'es'
@@ -389,7 +389,7 @@ Use the "Family-Friendly" filter in our app to find wineries with:
 
 Book now: ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}`);
         }
-        
+
         // Food pairing
         if (matchesPattern(lowerQuestion, 'food')) {
             return addBotMessage(lang === 'es'
@@ -412,7 +412,7 @@ Find gourmet experiences featuring:
 
 Explore options at: ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}`);
         }
-        
+
         // Cancellation/rescheduling
         if (matchesPattern(lowerQuestion, 'cancel')) {
             return addBotMessage(lang === 'es'
@@ -427,7 +427,7 @@ You can manage your bookings directly through the app.
 
 Tip: Check each winery's specific cancellation policy before booking.`);
         }
-        
+
         // About NVW / Story
         if (matchesPattern(lowerQuestion, 'about')) {
             const story = kb?.about?.story || "NVW was created to simplify wine tourism in Napa Valley!";
@@ -447,7 +447,7 @@ Mission: Celebrate local wine culture and support small businesses.
 
 Explore more in our app!`);
         }
-        
+
         // Directions/location
         if (matchesPattern(lowerQuestion, 'location')) {
             const location = kb?.company?.location || "Napa, California";
@@ -469,7 +469,7 @@ For directions to specific wineries:
 
 Our app integrates with Google Maps for turn-by-turn guidance.`);
         }
-        
+
         // For wineries / business
         if (matchesPattern(lowerQuestion, 'help') || lowerQuestion.includes('winery owner') || lowerQuestion.includes('partner') || lowerQuestion.includes('join')) {
             return addBotMessage(lang === 'es'
@@ -494,20 +494,20 @@ Benefits:
 
 Contact us: ${kb?.company?.email || 'info@winesnvw.com'} or visit our "For Wineries" page`);
         }
-        
+
         // Default response with all contact methods
         const phone = kb?.company?.phone || '954 422 2894';
         const email = kb?.company?.email || 'info@winesnvw.com';
         const whatsapp = kb?.company?.whatsapp || '+1 954 422 2894';
         const bookingApp = kb?.company?.bookingApp || 'https://napa-one.vercel.app/';
-        
+
         return addBotMessage(lang === 'es'
             ? `¡Gracias por preguntar! Aquí está cómo puedo ayudarte:
 
 📱 Reservar una bodega: ${bookingApp}
 📞 Llamar: ${phone}
 📧 Email: ${email}
-💬 WhatsApp: ${whatsapp}
+
 
 ¿Tienes alguna pregunta específica sobre reservas, bodegas, tours o precios?`
             : `Thanks for asking! Here's how I can help:
@@ -515,14 +515,14 @@ Contact us: ${kb?.company?.email || 'info@winesnvw.com'} or visit our "For Winer
 📱 Book a winery: ${bookingApp}
 📞 Call: ${phone}
 📧 Email: ${email}
-💬 WhatsApp: ${whatsapp}
+
 
 Do you have a specific question about bookings, wineries, tours, or prices?`);
     }
-    
+
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href !== '#' && href !== '') {
                 e.preventDefault();
@@ -536,14 +536,14 @@ Do you have a specific question about bookings, wineries, tours, or prices?`);
             }
         });
     });
-    
+
     // Scroll Animation
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
-    const observer = new IntersectionObserver(function(entries) {
+
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
@@ -551,28 +551,28 @@ Do you have a specific question about bookings, wineries, tours, or prices?`);
             }
         });
     }, observerOptions);
-    
+
     const animateElements = document.querySelectorAll('.feature-card, .blog-card, .testimonial-grid, .story-grid');
     animateElements.forEach(element => {
         observer.observe(element);
     });
-    
+
     // Back to Top Button
     const backToTop = document.createElement('button');
     backToTop.innerHTML = '↑';
     backToTop.className = 'back-to-top';
     backToTop.setAttribute('aria-label', 'Back to top');
     document.body.appendChild(backToTop);
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         if (window.pageYOffset > 300) {
             backToTop.classList.add('visible');
         } else {
             backToTop.classList.remove('visible');
         }
     });
-    
-    backToTop.addEventListener('click', function() {
+
+    backToTop.addEventListener('click', function () {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
