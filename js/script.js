@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('NVW Website - Interactive features loaded successfully');
 
     // Load knowledge base
-    const KB = typeof NVW_KNOWLEDGE_BASE !== 'undefined' ? NVW_KNOWLEDGE_BASE : {};
+    // Load knowledge base
+    // const KB = typeof NVW_KNOWLEDGE_BASE !== 'undefined' ? NVW_KNOWLEDGE_BASE : {};
 
     // Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -194,7 +195,9 @@ ${message}`;
     function addUserMessage(message) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'chatbot-message user-message';
-        messageDiv.innerHTML = `<p>${message}</p>`;
+        const p = document.createElement('p');
+        p.textContent = message;
+        messageDiv.appendChild(p);
         chatbotMessages.appendChild(messageDiv);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
