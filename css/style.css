@@ -1562,9 +1562,15 @@ a {
     }
 
     .chatbot-container {
+        position: fixed;
         width: calc(100vw - 2rem);
-        max-width: 100%;
-        right: -1rem;
+        max-width: 400px;
+        left: 1rem;
+        right: 1rem;
+        bottom: 80px;
+        height: 60vh;
+        max-height: 500px;
+        border-radius: 15px;
     }
 
     .chatbot-badge {
@@ -1631,4 +1637,48 @@ a {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     background: #f8f8f8;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 160px;
+    /* Above WhatsApp and Chatbot */
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    background: var(--primary-burgundy);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--gold);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 155px;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }

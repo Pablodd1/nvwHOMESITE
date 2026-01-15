@@ -9,10 +9,10 @@ const chatbotKnowledge = {
         phone: "954 422 2894",
         phoneLink: "tel:9544222894",
 
-        email: "info@winesnvw.com",
+        email: "info@nvw.wine",
         bookingApp: "https://napa-one.vercel.app/",
         social: {
-            linkedin: "https://www.linkedin.com/company/winesnvw/",
+            tiktok: "https://www.tiktok.com/@nvw.wine",
             instagram: "https://www.instagram.com/winesnvw/",
             facebook: "https://www.facebook.com/people/Wines-Nvw/pfbid0DG75KQXmicg4i14AicKyhtC6gsvBtgAPkbEVimw5cBdb2KsntX3nwK8Pe3eK24WAl/"
         },
@@ -101,26 +101,13 @@ const chatbotKnowledge = {
         ]
     },
 
-    // For Wineries Information
-    forWineries: {
-        benefits: [
-            "Enhanced Discovery: Priority placement in search results tailored to user preferences",
-            "Targeted Promotions: Highlight exclusive offers and seasonal campaigns",
-            "Visitor Insights: Detailed analytics on visitor preferences and trends",
-            "Guest Engagement: Direct communication with visitors and review collection",
-            "Easy Management: Simple profile updates and real-time availability management",
-            "Real-Time Booking: Instant booking capabilities with Google Maps integration"
-        ],
-        howToJoin: "Contact us at info@winesnvw.com or call 954 422 2894 to learn more about becoming a member winery."
-    },
-
     // Contact Options
     contact: {
         phone: "Call us at 954 422 2894",
-        email: "Email us at info@winesnvw.com",
+        email: "Email us at info@nvw.wine",
 
         form: "Fill out the contact form on our Contact page",
-        social: "Connect with us on LinkedIn, Instagram, or Facebook"
+        social: "Connect with us on TikTok, Instagram, or Facebook"
     },
 
     // Operating Hours (if applicable)
@@ -142,7 +129,7 @@ const bilingualResponses = {
     en: {
         greeting: "Hi! I'm your NVW assistant. How can I help you today?",
         bookingInfo: "You can book your winery experience at: https://napa-one.vercel.app/",
-        contactInfo: "Contact us:\n📞 Phone: 954 422 2894\n📧 Email: info@winesnvw.com",
+        contactInfo: "Contact us:\n📞 Phone: 954 422 2894\n📧 Email: info@nvw.wine",
         needMoreHelp: "Need more help? Feel free to ask another question!",
         didntUnderstand: "I'm not sure I understood that. Could you rephrase your question? You can ask about bookings, wineries, tours, or contact information.",
         checkWebsite: "For more details, check our website pages or visit our booking app!"
@@ -150,7 +137,7 @@ const bilingualResponses = {
     es: {
         greeting: "¡Hola! Soy tu asistente NVW. ¿Cómo puedo ayudarte hoy?",
         bookingInfo: "Puedes reservar tu experiencia vinícola en: https://napa-one.vercel.app/",
-        contactInfo: "Contáctanos:\n📞 Teléfono: 954 422 2894\n📧 Email: info@winesnvw.com",
+        contactInfo: "Contáctanos:\n📞 Teléfono: 954 422 2894\n📧 Email: info@nvw.wine",
         needMoreHelp: "¿Necesitas más ayuda? ¡Pregunta lo que quieras!",
         didntUnderstand: "No estoy seguro de haber entendido. ¿Podrías reformular tu pregunta? Puedes preguntar sobre reservas, bodegas, tours o información de contacto.",
         checkWebsite: "¡Para más detalles, consulta nuestro sitio web o visita nuestra app de reservas!"
