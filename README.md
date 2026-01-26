@@ -113,7 +113,7 @@ nvw-website/
 - **Booking App:** https://napa-one.vercel.app/
 - **WhatsApp:** +1 954 422 2894
 - **Email:** info@winesnvw.com
-- **Social Media:** LinkedIn, Instagram, Facebook
+- **Social Media:** Instagram, Facebook
 
 ---
 
@@ -136,7 +136,7 @@ nvw-website/
 - **WhatsApp:** +1 954 422 2894
 
 ### **Social Media**
-- LinkedIn: https://www.linkedin.com/company/winesnvw/
+
 - Instagram: https://www.instagram.com/winesnvw/
 - Facebook: https://www.facebook.com/people/Wines-Nvw/pfbid0DG75KQXmicg4i14AicKyhtC6gsvBtgAPkbEVimw5cBdb2KsntX3nwK8Pe3eK24WAl/
 
