@@ -113,7 +113,7 @@ nvw-website/
 - **Booking App:** https://napa-one.vercel.app/
 - **WhatsApp:** +1 954 422 2894
 - **Email:** info@winesnvw.com
-- **Social Media:** Instagram, Facebook
+- **Social Media:** TikTok, Instagram, Facebook
 
 ---
 
@@ -137,7 +137,8 @@ nvw-website/
 
 ### **Social Media**
 
-- Instagram: https://www.instagram.com/winesnvw/
+- TikTok: https://www.tiktok.com/@napavalleywineries
+- Instagram: https://www.instagram.com/nvwcalifornia?igsh=MTEwcGJ3ankzaTVpaQ==
 - Facebook: https://www.facebook.com/people/Wines-Nvw/pfbid0DG75KQXmicg4i14AicKyhtC6gsvBtgAPkbEVimw5cBdb2KsntX3nwK8Pe3eK24WAl/
 
 ---
