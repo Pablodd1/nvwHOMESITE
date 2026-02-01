@@ -406,6 +406,15 @@ a {
     line-height: 1.8;
 }
 
+.story-founder {
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary-burgundy);
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+}
+
 .story-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
