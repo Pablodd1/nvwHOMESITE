@@ -1683,29 +1683,3 @@ a {
         font-size: 1.2rem;
     }
 }
-/* Special Black Section with Small Font */
-.section-black-small-font {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 5rem 0;
-}
-
-.section-black-small-font .section-title,
-.section-black-small-font .section-subtitle,
-.section-black-small-font h1, 
-.section-black-small-font h2, 
-.section-black-small-font h3, 
-.section-black-small-font h4 {
-    color: #ffffff !important;
-}
-
-.section-black-small-font p,
-.section-black-small-font li,
-.section-black-small-font span {
-    font-size: 0.9rem !important; /* Decreased font size */
-    color: #cccccc; /* Slightly off-white for readability */
-}
-
-.section-black-small-font blockquote p {
-    color: #cccccc !important;
-}
