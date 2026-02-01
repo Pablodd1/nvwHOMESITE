@@ -112,8 +112,8 @@ nvw-website/
 ### **🔗 Integrations**
 - **Booking App:** https://napa-one.vercel.app/
 - **WhatsApp:** +1 954 422 2894
-- **Email:** info@winesnvw.com
-- **Social Media:** TikTok, Instagram, Facebook
+- **Email:** anabel@nvw.wine
+- **Social Media:** TikTok, Instagram
 
 ---
 
@@ -132,14 +132,13 @@ nvw-website/
 - **Company:** NVW - Napa Valley Wineries
 - **Location:** Napa, California
 - **Phone:** 954 422 2894
-- **Email:** info@winesnvw.com
+- **Email:** anabel@nvw.wine
 - **WhatsApp:** +1 954 422 2894
 
 ### **Social Media**
 
 - TikTok: https://www.tiktok.com/@napavalleywineries
 - Instagram: https://www.instagram.com/nvwcalifornia?igsh=MTEwcGJ3ankzaTVpaQ==
-- Facebook: https://www.facebook.com/people/Wines-Nvw/pfbid0DG75KQXmicg4i14AicKyhtC6gsvBtgAPkbEVimw5cBdb2KsntX3nwK8Pe3eK24WAl/
 
 ---
 
@@ -206,7 +205,7 @@ After deployment, you can add a custom domain:
 ## 🚀 Support
 
 For support or inquiries:
-- Email: info@winesnvw.com
+- Email: anabel@nvw.wine
 - Phone: 954 422 2894
 - WhatsApp: +1 954 422 2894
 
