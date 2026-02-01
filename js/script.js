@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const subject = 'Newsletter Subscription';
             const body = `New newsletter subscription from: ${email}`;
-            window.location.href = `mailto:info@nvw.wine?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = `mailto:anabel@nvw.wine?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
             const lang = localStorage.getItem('language') || 'en';
             const message = lang === 'es'
@@ -126,7 +126,7 @@ Phone: ${phone}
 Message:
 ${message}`;
 
-            window.location.href = `mailto:info@nvw.wine?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+            window.location.href = `mailto:anabel@nvw.wine?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
 
             const lang = localStorage.getItem('language') || 'en';
             const alertMessage = lang === 'es'
@@ -296,7 +296,7 @@ Book now: ${kb?.company?.bookingApp || 'https://napa-one.vercel.app/'}`);
         // Contact information
         if (matchesPattern(lowerQuestion, 'contact')) {
             const phone = kb?.company?.phone || '954 422 2894';
-            const email = kb?.company?.email || 'info@nvw.wine';
+            const email = kb?.company?.email || 'anabel@nvw.wine';
             const whatsapp = kb?.company?.whatsapp || '+1 954 422 2894';
 
             return addBotMessage(lang === 'es'
@@ -485,7 +485,7 @@ Beneficios:
 ✅ Herramientas promocionales
 ✅ Gestión fácil
 
-Contáctanos: ${kb?.company?.email || 'info@nvw.wine'} o visita nuestra página "For Wineries"`
+Contáctanos: ${kb?.company?.email || 'anabel@nvw.wine'} o visita nuestra página "For Wineries"`
                 : `Are you a winery owner? Join NVW!
 
 Benefits:
@@ -495,12 +495,12 @@ Benefits:
 ✅ Promotional tools
 ✅ Easy management
 
-Contact us: ${kb?.company?.email || 'info@nvw.wine'} or visit our "For Wineries" page`);
+Contact us: ${kb?.company?.email || 'anabel@nvw.wine'} or visit our "For Wineries" page`);
         }
 
         // Default response with all contact methods
         const phone = kb?.company?.phone || '954 422 2894';
-        const email = kb?.company?.email || 'info@nvw.wine';
+        const email = kb?.company?.email || 'anabel@nvw.wine';
         const whatsapp = kb?.company?.whatsapp || '+1 954 422 2894';
         const bookingApp = kb?.company?.bookingApp || 'https://napa-one.vercel.app/';
 
