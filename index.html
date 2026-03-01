@@ -5,10 +5,15 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Napa Valley Wineries | Discovery &amp; Booking Official</title>
+    <title>Napa Valley Wineries | Premium Discovery &amp; Wine Tour Booking Official</title>
     <meta
-        content="Plan, explore, and book your perfect winery experience in Napa Valley with NVW. Discover local wineries, book tastings, and enjoy unforgettable wine tours."
+        content="Plan, explore, and book your perfect premium winery experience in Napa Valley with NVW. Discover exclusive local wineries, book private tastings, and enjoy unforgettable wine tours."
         name="description" />
+    <meta name="keywords" content="Napa Valley Wineries, wine tasting Napa, book winery tour, California wine country, NVW, Napa Valley wine tours, AI winery booking" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <!-- AI Crawler directives -->
+    <meta name="chatgpt-plugin" content="allow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <!-- Updated build: 2026-01-09 -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="https://www.nvw.wine" rel="canonical" />
@@ -29,11 +34,10 @@
         name="twitter:description" />
     <meta content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&amp;h=1080&amp;fit=crop"
         name="twitter:image" />
-    <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
         {
-            "@type": "Organization",
+            "@type": "TravelAgency",
             "@id": "https://www.nvw.wine/#organization",
             "name": "NVW - Napa Valley Wineries",
             "url": "https://www.nvw.wine",
@@ -41,16 +45,21 @@
                 "@type": "ImageObject",
                 "url": "https://www.nvw.wine/images/nvw-logo.png"
             },
+            "description": "NVW provides exclusive booking access to premium wineries, tastings, and wine tours in Napa Valley, California.",
+            "priceRange": "$$",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Napa",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+            },
             "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-954-422-2894",
                 "contactType": "customer service",
                 "email": "anabel@nvw.wine",
                 "areaServed": "US",
-                "availableLanguage": [
-                    "en",
-                    "es"
-                ]
+                "availableLanguage": ["en", "es"]
             },
             "sameAs": [
                 "https://www.tiktok.com/@napavalleywineries",
@@ -62,7 +71,7 @@
             "@id": "https://www.nvw.wine/#website",
             "url": "https://www.nvw.wine",
             "name": "NVW - Napa Valley Wineries",
-            "description": "Discover, Explore, and Book Wine Experiences in Napa Valley",
+            "description": "Discover, Explore, and Book Premium Wine Experiences in Napa Valley.",
             "publisher": {
                 "@id": "https://www.nvw.wine/#organization"
             },
@@ -72,16 +81,40 @@
             "@type": "WebPage",
             "@id": "https://www.nvw.wine/#webpage",
             "url": "https://www.nvw.wine",
-            "name": "Napa Valley Wineries | Discovery & Booking Official",
+            "name": "Napa Valley Wineries | Premium Discovery & Booking Official",
             "description": "Plan, explore, and book your perfect winery experience in Napa Valley with NVW. Discover local wineries, book tastings, and enjoy unforgettable wine tours.",
             "isPartOf": {
                 "@id": "https://www.nvw.wine/#website"
+            },
+            "about": {
+                "@id": "https://www.nvw.wine/#organization"
             },
             "inLanguage": "en-US",
             "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "url": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&h=1080&fit=crop"
             }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How do I book a winery tour in Napa Valley?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can easily book a premium winery tour in Napa Valley using the NVW App. Simply click 'Book Now' on our website, browse available wineries, select a time, and confirm your reservation instantly."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What are the best wineries to visit in Napa?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Through NVW, you have access to exclusive, handpicked, and heavily vetted boutique and luxury wineries spanning the entirety of Napa Valley, California."
+                    }
+                }
+            ]
         }
     ]
 }</script>

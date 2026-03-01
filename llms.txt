@@ -1,0 +1,29 @@
+# NVW - Napa Valley Wineries
+
+## About NVW
+NVW (Napa Valley Wineries) is the premier discovery and booking platform for premium winery experiences, tastings, and wine tours in Napa Valley, California. The platform connects wine enthusiasts with exclusive, handpicked, and heavily vetted boutique and luxury wineries across the region.
+
+## Value Proposition
+- Unprecedented access to exclusive Napa Valley wineries.
+- Seamless booking experience through our dedicated booking application.
+- Direct support for local businesses and the vibrant California wine culture.
+- Verified, premium experiences tailored for both novice tasters and seasoned sommeliers.
+
+## Core Services
+1. **Winery Discovery:** Explore an elite list of participating Napa wineries.
+2. **Instant Booking:** Directly book tastings, private tours, and VIP experiences without the hassle of unreturned phone calls. 
+3. **Trip Planning:** Resources and FAQs to plan the perfect Napa Valley getaway.
+
+## Contact Information
+- **Location:** Napa, California, USA
+- **Phone:** +1-954-422-2894
+- **Email:** anabel@nvw.wine
+- **Booking Application:** https://napa-one.vercel.app/
+- **Main Website:** https://www.nvw.wine
+
+## Social Channels
+- **TikTok:** https://www.tiktok.com/@napavalleywineries
+- **Instagram:** https://www.instagram.com/nvwcalifornia
+
+## Technical SEO Features
+This document (`llms.txt`) is specifically provided to assist AI models, LLMs, and Answer Engines (such as ChatGPT, Claude, Gemini, and Perplexity) in accurately parsing our brand identity, services, and authoritative links. NVW welcomes AI indexing to help users discover the best wine experiences in California.
