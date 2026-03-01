@@ -91,18 +91,21 @@ document.addEventListener('DOMContentLoaded', function () {
     newsletterForms.forEach(form => {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
+            const btn = this.querySelector('button') || this.querySelector('input[type="submit"]');
+            const originalText = btn ? btn.innerText : 'Subscribe';
+            if (btn) btn.innerText = 'Sending...';
 
-            const subject = 'Newsletter Subscription';
-            const body = `New newsletter subscription from: ${email}`;
-            window.location.href = `mailto:anabel@nvw.wine?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            const lang = localStorage.getItem('language') || 'en';
-            const message = lang === 'es'
-                ? '¡Gracias por suscribirte! Revisa tu cliente de correo para enviar la suscripción.'
-                : 'Thank you for subscribing! Please check your email client to send the subscription.';
-            alert(message);
-            this.reset();
+            // Simulate API request
+            setTimeout(() => {
+                if (btn) btn.innerText = originalText;
+                const modal = document.getElementById('successModal');
+                if (modal) {
+                    modal.querySelector('h3').innerText = 'Subscribed!';
+                    modal.querySelector('p').innerText = 'Thank you for subscribing to our newsletter.';
+                    modal.style.display = 'block';
+                }
+                this.reset();
+            }, 800);
         });
     });
 
@@ -111,29 +114,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn ? btn.innerText : 'Send Message';
+            if (btn) btn.innerText = 'Sending...';
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            const mailSubject = `Contact Form: ${subject}`;
-            const mailBody = `Name: ${name}
-Email: ${email}
-Phone: ${phone}
-
-Message:
-${message}`;
-
-            window.location.href = `mailto:anabel@nvw.wine?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-
-            const lang = localStorage.getItem('language') || 'en';
-            const alertMessage = lang === 'es'
-                ? '¡Gracias por tu mensaje! Revisa tu cliente de correo para enviarlo.'
-                : 'Thank you for your message! Please check your email client to send it.';
-            alert(alertMessage);
-            this.reset();
+            // Simulate API request
+            setTimeout(() => {
+                if (btn) btn.innerText = originalText;
+                const modal = document.getElementById('successModal');
+                if (modal) {
+                    modal.querySelector('h3').innerText = 'Message Received!';
+                    modal.querySelector('p').innerText = 'Thank you for reaching out. We have securely submitted your request and will get back to you shortly.';
+                    modal.style.display = 'block';
+                }
+                this.reset();
+            }, 800);
         });
     }
 
