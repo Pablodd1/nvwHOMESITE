@@ -30,14 +30,9 @@ NVW (Napa Valley Wineries) is a comprehensive platform connecting wine enthusias
 
 ### **Deploy to Vercel (Recommended)**
 
-1. **Push to GitHub:**
+1. **Clone the Repository:**
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - NVW website"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/nvw-website.git
-   git push -u origin main
+   gh repo clone Pablodd1/nvwHOMESITE
    ```
 
 2. **Deploy on Vercel:**
