@@ -10,7 +10,7 @@ const chatbotKnowledge = {
         phoneLink: "tel:9544222894",
 
         email: "anabel@nvw.wine",
-        bookingApp: "https://napa-one.vercel.app/",
+        bookingApp: "https://app.nvw.wine/",
         social: {
             tiktok: "https://www.tiktok.com/@nvw.wine",
             instagram: "https://www.instagram.com/nvwcalifornia?igsh=MTEwcGJ3ankzaTVpaQ==",
@@ -27,11 +27,11 @@ const chatbotKnowledge = {
 
     // Booking Information
     booking: {
-        howToBook: "Simply visit our booking app at https://napa-one.vercel.app/, select a winery, choose your preferred date and time, and complete your booking with just a few clicks.",
+        howToBook: "Simply visit our booking app at https://app.nvw.wine/, select a winery, choose your preferred date and time, and complete your booking with just a few clicks.",
         rescheduling: "Yes, most wineries allow rescheduling or cancellations. You can manage your bookings directly through the app.",
         reservationsRequired: "Some wineries allow walk-ins, but most require reservations. NVW provides real-time booking to ensure availability.",
         groupBookings: "Absolutely! Use the 'Private Booking' filter to find wineries offering group tours and private events.",
-        bookingLink: "https://napa-one.vercel.app/"
+        bookingLink: "https://app.nvw.wine/"
     },
 
     // Winery Features and Services
@@ -127,7 +127,7 @@ const chatbotKnowledge = {
 const bilingualResponses = {
     en: {
         greeting: "Hi! I'm your NVW assistant. How can I help you today?",
-        bookingInfo: "You can book your winery experience at: https://napa-one.vercel.app/",
+        bookingInfo: "You can book your winery experience at: https://app.nvw.wine/",
         contactInfo: "Contact us:\n📞 Phone: 954 422 2894\n📧 Email: anabel@nvw.wine",
         needMoreHelp: "Need more help? Feel free to ask another question!",
         didntUnderstand: "I'm not sure I understood that. Could you rephrase your question? You can ask about bookings, wineries, tours, or contact information.",
@@ -135,7 +135,7 @@ const bilingualResponses = {
     },
     es: {
         greeting: "¡Hola! Soy tu asistente NVW. ¿Cómo puedo ayudarte hoy?",
-        bookingInfo: "Puedes reservar tu experiencia vinícola en: https://napa-one.vercel.app/",
+        bookingInfo: "Puedes reservar tu experiencia vinícola en: https://app.nvw.wine/",
         contactInfo: "Contáctanos:\n📞 Teléfono: 954 422 2894\n📧 Email: anabel@nvw.wine",
         needMoreHelp: "¿Necesitas más ayuda? ¡Pregunta lo que quieras!",
         didntUnderstand: "No estoy seguro de haber entendido. ¿Podrías reformular tu pregunta? Puedes preguntar sobre reservas, bodegas, tours o información de contacto.",
