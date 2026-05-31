@@ -8,8 +8,8 @@
 
 ## 🌐 Live Website
 
-- **Production:** [Your Vercel URL here]
-- **Booking App:** https://napa-one.vercel.app/
+- **Production:** https://www.nvw.wine
+- **Booking App:** https://app.nvw.wine
 
 ---
 
@@ -105,10 +105,21 @@ nvw-website/
 - Scroll animations
 
 ### **🔗 Integrations**
-- **Booking App:** https://napa-one.vercel.app/
+- **Booking App:** https://app.nvw.wine
 - **WhatsApp:** +1 954 422 2894
 - **Email:** anabel@nvw.wine
 - **Social Media:** TikTok, Instagram
+
+---
+
+## 🔍 SEO & Agentic Optimization
+
+This site is fully optimized for both traditional Search Engines (Google/Bing) and AI Agents (ChatGPT, Perplexity):
+- **JSON-LD Schema Markup:** Features robust `Organization` schema on the homepage, `FAQPage` schema on the FAQ page, and `BlogPosting` schema on all articles.
+- **Global Meta Tags:** Implements comprehensive Open Graph (OG) tags, Twitter cards, and Canonical links across all HTML files.
+- **Agent Guidelines (`llms.txt`):** Includes a dedicated `llms.txt` instruction manual for AI web crawlers to properly direct users into the booking funnel.
+- **Multilingual Support:** Implements `hreflang` tags to capture both English and Spanish search intent.
+- **Sitemap & Robots:** Fully mapped `sitemap.xml` paired with a proper `robots.txt`.
 
 ---
 
